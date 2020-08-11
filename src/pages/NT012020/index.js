@@ -393,35 +393,29 @@ export default function Virtualize() {
 
     if (
       Number(areaTotal) <= 200
-      && Number(cargaIncendio) <= 300
-      && reuniaoDePublico == 'false'(edificacao == 'false' || tamanhoEdificacao == 'true')
-      && aberturas == 'false'
-      && lotacao == 'dispensado'
-      && Number(pavimentos) <= 2
-      && (subsolo == 'dispensado' || garagem == 'dispensado')
-      && (liquidoInflamavel == 'dispensado'
-        || quantidadeLiquido == 'dispensado')
-      && (glp == 'dispensado'
-        || capacidadeGlp == 'dispensado'
-        || capacidadeGlp == 'central')
+          && Number(cargaIncendio) <= 300
+          && reuniaoDePublico == 'false'
+          && (edificacao == 'false' || tamanhoEdificacao == 'true')
+          && aberturas == 'false'
+          && lotacao == 'dispensado'
+          && Number(pavimentos) <= 2
+          && (subsolo == 'dispensado' || garagem == 'dispensado')
+          && (liquidoInflamavel == 'dispensado' || quantidadeLiquido == 'dispensado')
+          && (glp == 'dispensado' || capacidadeGlp == 'dispensado' || capacidadeGlp == 'central')
     ) {
       return <Dispensada />;
     } else if (
       Number(areaTotal) <= 750
-      // && Number(cargaIncendio) <= 1200 // removido conforme orientação Cap Justo
-      && previa62251 == 'false'
-      && previa62252 == 'false'
-      && Number(pavimentos) <= 3
-      && aberturas == 'false'
-      && (subsolo == 'dispensado' || garagem == 'dispensado')
-      && (lotacao == 'dispensado' || lotacao == 'previa')
-      && (liquidoInflamavel == 'dispensado'
-        || quantidadeLiquido == 'dispensado'
-        || quantidadeLiquido == 'previa')
-      && (glp == 'dispensado'
-        || capacidadeGlp == 'dispensado'
-        || capacidadeGlp == 'previa'
-        || capacidadeGlp == 'central')
+        // && Number(cargaIncendio) <= 1200 // removido conforme orientação Cap Justo
+        && previa62251 == 'false'
+        && previa62252 == 'false'
+        && Number(pavimentos) <= 3
+        && aberturas == 'false'
+        && (subsolo == 'dispensado' || garagem == 'dispensado')
+        && (lotacao == 'dispensado' || lotacao == 'previa')
+        && (liquidoInflamavel == 'dispensado' || quantidadeLiquido == 'dispensado' || quantidadeLiquido == 'previa')
+        && (glp == 'dispensado' || capacidadeGlp == 'dispensado' || capacidadeGlp == 'previa' || capacidadeGlp == 'central')
+
     ) {
       return <Previa link={link} />;
     } else {

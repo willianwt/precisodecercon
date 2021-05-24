@@ -826,12 +826,12 @@ export default function Virtualize() {
                 <FormControlLabel
                   value="previa"
                   control={<Radio />}
-                  label="de 101 a 200 pessoas"
+                  label="de 101 a 199 pessoas"
                 />
                 <FormControlLabel
                   value="vistoria"
                   control={<Radio />}
-                  label="Acima de 201 pessoas"
+                  label="200 ou mais pessoas"
                 />
               </RadioGroup>
             </FormControl>
